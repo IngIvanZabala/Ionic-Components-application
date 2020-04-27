@@ -1,5 +1,6 @@
-<app-header title="alert"></app-header>
+<app-header title="{{name}}"></app-header>
 
 <ion-content>
-  <h2>Alert page</h2>
+  <ion-button color="primary" expand="full" (click)="presentAlert()"> Show Alert</ion-button>
+  <ion-button color="primary" expand="full" (click)="presentPrompt()"> Show Prompt</ion-button>
 </ion-content>
