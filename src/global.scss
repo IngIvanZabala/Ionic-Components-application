@@ -29,3 +29,6 @@
 .red-label span, .red-label .sc-ion-action-sheet-md{
     color:red !important;
 }
+.ion-datetime {
+    touch-action: none;
+}

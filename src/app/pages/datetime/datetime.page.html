@@ -1,9 +1,51 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>datetime</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header title="datetime"></app-header>
 
-<ion-content>
-
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-list-header>
+      <ion-label>
+         Datos de nacimiento
+      </ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>
+        Fecha de nacimiento
+      </ion-label>
+      <ion-datetime placeholder="Fecha nacimiento" 
+                    display-format="YYYY MM DD"
+                    cancelText="Cancelar"
+                    doneText="Hecho"
+                    [ngModel]="birthDate.toISOString()"
+                    (ionChange)="dateChange($event)">
+      </ion-datetime>
+    </ion-item>
+    <ion-list-header>
+      <ion-label>
+         Restricciones
+      </ion-label>
+    </ion-list-header> 
+    <ion-item>
+      <ion-label> Min & Max</ion-label>
+      <ion-datetime placeholder="YYYY-MM-DD "
+                    display-format="YYYY MM DD" 
+                    min="2015-01-01"
+                    max="2015-12-31"> 
+    </ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label> Años</ion-label>
+      <ion-datetime placeholder="YYYY"
+                    display-format="YYYY"
+                    min="2015"
+                    max="2025"
+                    value="2020"> 
+    </ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label> Opciones Personalizadas</ion-label>
+      <ion-datetime [pickerOptions]="customPickerOptions"
+                    [(ngModel)]="customDate "> 
+    </ion-datetime>
+    </ion-item>
+  </ion-list>  
 </ion-content>
