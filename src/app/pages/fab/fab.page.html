@@ -1,0 +1,35 @@
+<app-header title="fab"></app-header>
+<ion-content>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon  name="add-outline" color="light"></ion-icon>      
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button>
+        <ion-icon name="share-social-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="person-add-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+    <ion-fab-list side="start">
+      <ion-fab-button color="facebook">
+        <ion-icon  name="logo-facebook"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="youtube">
+        <ion-icon  name="logo-twitter"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+  <ion-list>
+    <ion-item *ngFor="let item of data; let i = index ">
+       Item  {{i + 1}}
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title> Este es el footer</ion-title>
+  </ion-toolbar>
+</ion-footer>
