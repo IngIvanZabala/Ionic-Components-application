@@ -67,6 +67,11 @@ export class InicioPage implements OnInit {
       icon:'list-outline',
       title:'List',
       redirectTo:'/list'
+    },
+    {
+      icon:'battery-charging-outline',
+      title:'Loading',
+      redirectTo:'/loading'
     }
   ]
   constructor() { }
